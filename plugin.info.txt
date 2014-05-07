@@ -1,0 +1,9 @@
+# General Plugin Info do not edit
+
+base   rssbycreated
+author i-net software / Gerry Weißbach
+email  tools@inetsoftware.de
+date   2014-04-23
+name   Sort RSS by Created Date
+desc   Sorts the RSS feed by the date it was created 
+url    https://github.com/i-net-software/dokuwiki-plugins-rssbycreated
