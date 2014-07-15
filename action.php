@@ -15,7 +15,7 @@ require_once(DOKU_PLUGIN.'action.php');
 
 class action_plugin_rssbycreated extends DokuWiki_Action_Plugin {
 
-    function register(&$controller) {
+    function register(Doku_Event_Handler $controller) {
         // Support given via POST
         $controller->register_hook('FEED_ITEM_ADD', 'BEFORE', $this, 'rss_action');
         $controller->register_hook('FEED_DATA_PROCESS', 'BEFORE', $this, 'rss_action_pre');
