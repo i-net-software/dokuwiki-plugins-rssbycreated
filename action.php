@@ -21,7 +21,7 @@ class action_plugin_rssbycreated extends DokuWiki_Action_Plugin {
         $controller->register_hook('FEED_DATA_PROCESS', 'BEFORE', $this, 'rss_action_pre');
     }
     
-    function rss_action(&$event, $args) {
+    function rss_action(Doku_Event $event, $args) {
         global $conf;
         
         if ( $event->data['opt']['item_content'] == 'abstract' ) {
@@ -45,7 +45,7 @@ class action_plugin_rssbycreated extends DokuWiki_Action_Plugin {
         return true;
     }
     
-    function rss_action_pre(&$event, $args) {
+    function rss_action_pre(Doku_Event $event, $args) {
         global $conf;
         $event->data['rss']->title = $conf['title'];
     
